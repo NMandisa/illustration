@@ -10,12 +10,10 @@ import java.io.IOException;
 
 public class DefaultIPLocationDAO  implements IPLocationDAO {
 
-    IPLocationFacade ipLocationFacade = new IPLocationFacade();
-
     @Override
     public ServerLocation getLocation(String ipAddress) throws IOException {
         File file = new ClassPathResource("GeoLiteCity.dat").getFile();
-        return ipLocationFacade.getLocation(ipAddress, file);
+        return new IPLocationFacade().getLocation(ipAddress, file);
     }
 
 }
