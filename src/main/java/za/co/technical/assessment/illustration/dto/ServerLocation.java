@@ -11,12 +11,6 @@ public class ServerLocation {
     private String latitude;
     private String longitude;
 
-    @Override
-    public String toString() {
-        return city + " " + postalCode + ", " + regionName + " (" + region
-                + "), " + countryName + " (" + countryCode + ") " + latitude
-                + "," + longitude;
-    }
 
     public String getCountryCode() {
         return countryCode;
@@ -25,27 +19,21 @@ public class ServerLocation {
     public String getCountryName() {
         return countryName;
     }
-
     public String getRegion() {
         return region;
     }
-
     public String getRegionName() {
         return regionName;
     }
-
     public String getCity() {
         return city;
     }
-
     public String getPostalCode() {
         return postalCode;
     }
-
     public String getLatitude() {
         return latitude;
     }
-
     public String getLongitude() {
         return longitude;
     }
