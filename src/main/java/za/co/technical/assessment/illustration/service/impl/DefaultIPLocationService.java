@@ -6,23 +6,27 @@ import za.co.technical.assessment.illustration.dto.ServerLocation;
 import za.co.technical.assessment.illustration.service.IPLocationService;
 
 import java.io.IOException;
+import java.util.logging.Logger;
 
 @Service
 public class DefaultIPLocationService implements IPLocationService {
 
+    private final Logger LOG = Logger.getLogger(String.valueOf(DefaultIPLocationService.class));
 
     @Override
-    public ServerLocation getLocation(String ipAddress) throws IOException {
+    public ServerLocation getLocation(String ipAddress)  {
 
-        DefaultIPLocationDAO obj = new DefaultIPLocationDAO();
+
+        DefaultIPLocationDAO defaultIPLocationDAO = new DefaultIPLocationDAO();
         ServerLocation location = null;
 
         try {
-            location = obj.getLocation(ipAddress);
+            location = defaultIPLocationDAO.getLocation(ipAddress);
+            LOG.info("IP Location Service :" + location);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println(location);
+        //System.out.println(location);
         return location;
     }
 }

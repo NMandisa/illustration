@@ -7,8 +7,11 @@ import za.co.technical.assessment.illustration.dto.ServerLocation;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.logging.Logger;
 
 public class IPLocationFacade {
+
+    private final Logger LOG = Logger.getLogger(String.valueOf(IPLocationFacade.class));
 
     public ServerLocation getLocation(String ipAddress, File file) {
 
@@ -33,7 +36,7 @@ public class IPLocationFacade {
             serverLocation.setLongitude(String.valueOf(locationServices.longitude));
 
         } catch (IOException e) {
-            System.err.println(e.getMessage());
+            LOG.info("Exception Inside IPLocation Facade :" + e.getCause());
         }
 
         return serverLocation;
