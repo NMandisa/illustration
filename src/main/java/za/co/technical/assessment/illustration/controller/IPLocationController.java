@@ -8,13 +8,13 @@ import za.co.technical.assessment.illustration.service.IPLocationService;
 
 @CrossOrigin(allowedHeaders = {"*"}, origins = "*")
 @RestController
-@RequestMapping(value = "/iploc")
+@RequestMapping(value = "/ip/")
 public class IPLocationController {
 
     @Autowired
     IPLocationService ipLocationService;
 
-    @RequestMapping(value = "/{ip}", method = RequestMethod.POST,headers="Accept=application/json")
+    @RequestMapping(value = "location/{ip}", method = RequestMethod.POST,headers="Accept=application/json")
     public ServerLocation iplocation (@PathVariable("ip") String ipAddress){
         ServerLocation location = ipLocationService.getLocation(ipAddress);
         return location;
