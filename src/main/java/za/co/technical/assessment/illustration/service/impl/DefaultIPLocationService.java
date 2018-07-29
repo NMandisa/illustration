@@ -19,7 +19,6 @@ public class DefaultIPLocationService implements IPLocationService {
 
         try {
             location = obj.getLocation(ipAddress);
-           // location = obj.getLocation("206.190.36.45");
         } catch (IOException e) {
             e.printStackTrace();
         }
