@@ -15,18 +15,14 @@ public class DefaultIPLocationService implements IPLocationService {
 
     @Override
     public ServerLocation getLocation(String ipAddress)  {
-
-
-        DefaultIPLocationDAO defaultIPLocationDAO = new DefaultIPLocationDAO();
-        ServerLocation location = null;
-
         try {
-            location = defaultIPLocationDAO.getLocation(ipAddress);
+            ServerLocation location = new DefaultIPLocationDAO().getLocation(ipAddress);
             LOG.info("IP Location Service :" + location);
+            return location;
         } catch (IOException e) {
-            e.printStackTrace();
+            LOG.log(LOG.getLevel(),e.getMessage());
+            return null;
         }
-        //System.out.println(location);
-        return location;
+
     }
 }
