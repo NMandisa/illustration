@@ -15,11 +15,8 @@ public class IPLocationFacade {
 
     public ServerLocation getLocation(String ipAddress, File file) {
 
-        ServerLocation serverLocation = null;
-
         try {
-
-            serverLocation = new ServerLocation();
+            ServerLocation serverLocation = new ServerLocation();
 
             LookupService lookup = new LookupService(file,LookupService.GEOIP_MEMORY_CACHE);
             Location locationServices = lookup.getLocation(ipAddress);
@@ -34,12 +31,13 @@ public class IPLocationFacade {
             serverLocation.setPostalCode(locationServices.postalCode);
             serverLocation.setLatitude(String.valueOf(locationServices.latitude));
             serverLocation.setLongitude(String.valueOf(locationServices.longitude));
-
+            return serverLocation;
         } catch (IOException e) {
             LOG.info("Exception Inside IPLocation Facade :" + e.getCause());
+            return null;
         }
 
-        return serverLocation;
+
 
     }
 }
