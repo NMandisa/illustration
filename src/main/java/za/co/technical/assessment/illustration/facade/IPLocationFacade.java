@@ -17,9 +17,7 @@ public class IPLocationFacade {
 
         try {
             ServerLocation serverLocation = new ServerLocation();
-
-            LookupService lookup = new LookupService(file,LookupService.GEOIP_MEMORY_CACHE);
-            Location locationServices = lookup.getLocation(ipAddress);
+            Location locationServices = new LookupService(file,LookupService.GEOIP_MEMORY_CACHE).getLocation(ipAddress);
 
 
             serverLocation.setCountryCode(locationServices.countryCode);
