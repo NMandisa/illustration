@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>za.co.technical.assessment.illustration.service.impl.DefaultIPLocationService</OriginalElement>
+  <nodes>
+    <node x="248.5" y="322.0">za.co.technical.assessment.illustration.controller.IPLocationController</node>
+    <node x="0.0" y="441.0">org.springframework.boot.autoconfigure.SpringBootApplication</node>
+    <node x="0.0" y="805.0">za.co.technical.assessment.illustration.dao.impl.DefaultIPLocationDAO</node>
+    <node x="467.0" y="33.5">org.springframework.web.bind.annotation.RequestMapping</node>
+    <node x="308.0" y="110.5">org.springframework.web.bind.annotation.RestController</node>
+    <node x="0.0" y="0.0">org.springframework.web.bind.annotation.CrossOrigin</node>
+    <node x="48.5" y="608.0">za.co.technical.assessment.illustration.IllustrationApplication</node>
+    <node x="362.25" y="542.0">za.co.technical.assessment.illustration.service.impl.DefaultIPLocationService</node>
+    <node x="470.0" y="441.0">za.co.technical.assessment.illustration.service.IPLocationService</node>
+    <node x="311.0" y="441.0">org.springframework.stereotype.Service</node>
+    <node x="0.0" y="704.0">za.co.technical.assessment.illustration.dao.IPLocationDAO</node>
+    <node x="297.0" y="704.0">za.co.technical.assessment.illustration.facade.IPLocationFacade</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="za.co.technical.assessment.illustration.controller.IPLocationController" target="org.springframework.web.bind.annotation.RestController">
+      <point x="0.0" y="-37.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="za.co.technical.assessment.illustration.dao.impl.DefaultIPLocationDAO" target="za.co.technical.assessment.illustration.dao.IPLocationDAO">
+      <point x="0.0" y="-25.5" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="za.co.technical.assessment.illustration.IllustrationApplication" target="org.springframework.boot.autoconfigure.SpringBootApplication">
+      <point x="0.0" y="-25.5" />
+      <point x="0.0" y="58.5" />
+    </edge>
+    <edge source="za.co.technical.assessment.illustration.service.impl.DefaultIPLocationService" target="org.springframework.stereotype.Service">
+      <point x="-63.0" y="-37.0" />
+      <point x="425.25" y="517.0" />
+      <point x="380.5" y="517.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="za.co.technical.assessment.illustration.controller.IPLocationController" target="org.springframework.web.bind.annotation.CrossOrigin">
+      <point x="-86.0" y="-37.0" />
+      <point x="291.5" y="297.0" />
+      <point x="144.0" y="297.0" />
+      <point x="0.0" y="136.0" />
+    </edge>
+    <edge source="za.co.technical.assessment.illustration.service.impl.DefaultIPLocationService" target="za.co.technical.assessment.illustration.service.IPLocationService">
+      <point x="63.0" y="-37.0" />
+      <point x="551.25" y="517.0" />
+      <point x="596.0" y="517.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="za.co.technical.assessment.illustration.controller.IPLocationController" target="org.springframework.web.bind.annotation.RequestMapping">
+      <point x="86.0" y="-37.0" />
+      <point x="463.5" y="297.0" />
+      <point x="574.0" y="297.0" />
+      <point x="0.0" y="102.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="229.5" y="280.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+    <Category>Fields</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
